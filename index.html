@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery Template</title>
-  </head>
-  <script type="text/javascript" src="">
-    
-  </script>
-  <body>
-  
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Template</title>
+</head>
+<script type="text/javascript" src="">
+
+  $(function() {
+    $('button').click(function() {
+      var buss = $("#buss").val();
+      var name = $("#name").val();
+      var email = $("#email").val();
+
+      if (buss == "") {
+        buss = "h4";
+      }
+      var email = $("#address").val();
+      var num = $("#num").val();
+      $('#buss').html('There once was a ' + buss);
+      $('#name').val();
+
+      $('button').click(function() {
+        $(this).css('color', 'pink');
+        $(this).css('font-size', '50px');
+        $(this).css('font', 'Rollback');
+      });
+    });
+  });
+</script>
+
+<body>
+
+  <h4>Business Name:</h4>  <input id="buss"><br> Full Owner Name: <input id="name"><br> Email: <input id="email"><br> Address: <input id="address"><br> Phone Number: <input id="num"><br>
+  <button>Submit Request</button>
+
+  <p></p>
+
+</body>
+
 </html>
