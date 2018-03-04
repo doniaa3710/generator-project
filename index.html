@@ -4,38 +4,72 @@
 <head>
   <meta charset="UTF-8">
   <title>jQuery Template</title>
+
 </head>
-<script type="text/javascript" src="">
-
+<style>
+</style>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
   $(function() {
+
     $('button').click(function() {
-      var buss = $("#buss").val();
-      var name = $("#name").val();
-      var email = $("#email").val();
-
-      if (buss == "") {
-        buss = "h4";
-      }
-      var email = $("#address").val();
-      var num = $("#num").val();
-      $('#buss').html('There once was a ' + buss);
-      $('#name').val();
-
-      $('button').click(function() {
-        $(this).css('color', 'pink');
-        $(this).css('font-size', '50px');
-        $(this).css('font', 'Rollback');
+      console.log(' the button was clicked');
+      var bus = $("#bus").val();
+      $('#buss').css(function() {
+        $(this).css('color', 'blue');
       });
+      var owner = $("#owner").val();
+      var email = $("#email").val();
+      var phone = $("#phone").val();
+      var address = $("#address").val();
+
+      $('#owner').click(function() {
+        $(this).css('color', 'blue');
+      });
+
+      var story = ("<font color=" + phone + ">" + "My Business Name is " + owner + " and my full name is " + bus + "." + " My address is " + address + " if you would like to contact me. " + "Incase of an emergency, you can contact me at: " + phone + " or " + email + "</font>" + " " + owner + "." + "</font>");
+      console.log(story);
+
+      $('p').html(story);
+
+
+      var r = confirm("Would you like to make your business card?");
+
+      if (r == true) {
+
+        x = "[Start Over]" (yes.md);
+
+      }
+      else {
+
+        x = "Have a good day !";
+
+      }
+
+
+
     });
   });
 </script>
 
 <body>
+  Business Name: <input id="owner"><br> Full Owner Name: <input id="bus"><br> Email: <input id="email"><br> Phone Number: <input id="phone"><br> Address: <input id="address"><br>
 
-  <h4>Business Name:</h4>  <input id="buss"><br> Full Owner Name: <input id="name"><br> Email: <input id="email"><br> Address: <input id="address"><br> Phone Number: <input id="num"><br>
+
   <button>Submit Request</button>
 
   <p></p>
+
+  When you Submit Request, please answer the following: Would you like to start your Business Card?
+
+  <input type="checkbox" name="Yes" />Yes? or <input type="checkbox" name="No" />No?
+
+  <form action="/action_page.php" method="get">
+    First name: <input type="text" name="fname"><br> Last name: <input type="text" name="lname"><br>
+
+    <button type="submit" formaction="/action_page2.php">Submit to another page</button>
+
+  </form>
 
 </body>
 
