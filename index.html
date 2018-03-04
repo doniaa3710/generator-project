@@ -1,71 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
-  <meta charset="UTF-8">
-  <title>jQuery Template</title>
-
-</head>
-<style>
-</style>
-<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<script type="text/javascript">
-  $(function() { 
+  <head>
+    <meta charset="UTF-8">
+    <title>Business Card Generator Project</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+   <script>
+    $(function() {
 
       $('button').click(function() {
         var owner = $('#owner').val();
         var bus = $('#bus').val();
         var email = $('#email').val();
         var phone = $('#phone').val();
-
-        $('button').css({ "margin": "5px", "font-size": "14px", "color": "black" });
-
-
-        $(this).slideUp();
-
-
-
-        $("p").html("#owner").val();
-        $('p').html(owner).css("background-color", yellow);
-
-        $("p").html("#bus").val();
-        $('p').html(bus).css("background-color", yellow);
-
-        $("p").html("#email").val();
-        $('p').html(email).css("background-color", yellow);
-
-        $("p").html("#phone").val();
-        $('p').html(phone).css("background-color", yellow);
-
-        $("p").css({ "background-color": "yellow", "font-family": "impact" });
-        $('body').css("background-color", black);
+        
         value = $("#owner").val();
         value = $("#bus").val();
         value = $("#email").val();
         value = $("#phone").val();
+
+
+        $('button').css({ "margin": "5px", "font-size": "14px", "color": "black" });
+        
+        $(this).slideUp();
+
+        $("p").html("#owner").val();
+        $('p').html(owner).css("background-color", yellow);
+
+        $("p").html("#bus").val().css("background-color", yellow);
+
+        $("p").html("#email").val().css("background-color", yellow);
+
+        $("p").html("#phone").val().css("background-color", yellow);
+
+        $("p").css({ "background-color": "yellow", "font-family": "impact" });
+        
+        $('body').css("background-color", "black");
+
+
       });
     });
-</script>
+  </script>
+  <style>
+  div {
+    margin: 10px;
+    background: yellow;
+    
+  }
+    span {
+      color: red;
+      font-size: 16px;
+    }
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    body {
+      background-image: url(black.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
 
-<body>
-  Business Name: <input id="owner"><br> Full Owner Name: <input id="bus"><br> Email: <input id="email"><br> Phone Number: <input id="phone"><br> Address: <input id="address"><br>
+    .front, .back{
+      background-image: url(front.jpg);
+      background-size: cover;
+      backface-visibility: hidden;
+      position: absolute;
+    }
 
 
-  <button>Submit Request</button>
+    .flip-image:hover .flipper,
+    .flip-image.hover .flipper {
+      transform: rotateY(180deg);
+      cursor: pointer;
+    }
 
-  <p></p>
+    .flip-image,
+    .front,
+    .back {
+      height: 350px;
+      width: 600px;
+    }
 
-  When you Submit Request, please answer the following: Would you like to start your Business Card?
+    .flipper {
+      transition: 0.5s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .back {
+      transform: rotateY(180deg);
+    }
+    p {
+      color: yellow;
+      font-family: Lobster;
+      width: 35%;
+      margin: 20px;
+      font-size: 25px;
+      padding-bottom: 15px;
+      margin-left: 30%;
+      line-height: 90%;
+    }
 
-  <input type="checkbox" name="Yes" />Yes? or <input type="checkbox" name="No" />No?
+    .inside {
+      margin-top: 25px;
+      color: yellow;
+      font-family: Lobster;
+      margin-left: 30%;
+      line-height: 90%;
+    }
+  </style>
 
-  <form action="/action_page.php" method="get">
-    First name: <input type="text" name="fname"><br> Last name: <input type="text" name="lname"><br>
+  <body>
 
-    <button type="submit" formaction="/action_page2.php">Submit to another page</button>
+    <div>
+      <button>Set Business Name</button> Business Name: <input id="owner"><br>
+      <button>Set Owner Name</button> Full Owner Name: <input id="bus"><br>
+      <button>Set Email Adress</button> Email: <input id="email"><br>
+      <button>Set Phone Number</button> Phone Number: <input id="phone"><br>
+      <button type="submit">Submit Response</button>
+    </div>
 
-  </form>
 
-</body>
+
+      <div class="flip-image centered">
+        <div class="flipper">
+          <div class="front"></div>
+          <div class="back">
+
+            <p></p>
+
+            <div class="inside">
+
+                <div class="outside">
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          </body>
+
 
 </html>
