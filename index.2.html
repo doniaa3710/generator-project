@@ -4,27 +4,48 @@
 <head>
   <meta charset="utf-8">
   <title>data demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $(function() {
+
+      $('button').click(function() {
+        var owner = $('#owner').val();
+        var bus = $('#bus').val();
+        var email = $('#email').val();
+        var phone = $('#phone').val();
+
+
+        $('button').css({ "margin": "5px", "font-size": "14px", "color": "black" });
+
+
+        $(this).slideUp();
+
+
+        $("p").html("#owner").val();
+        $('p').html(owner).css("background-color", yellow);
+
+        $("p").html("#bus").val();
+        $('p').html(bus).css("background-color", yellow);
+
+        $("p").html("#email").val();
+        $('p').html(email).css("background-color", yellow);
+
+        $("p").html("#phone").val();
+        $('p').html(phone).css("background-color", yellow);
+
+        $("p").css({ "background-color": "yellow", "font-family": "impact" });
+        $('body').css("background-color", black);
+        value = $("#owner").val();
+        value = $("#bus").val();
+        value = $("#email").val();
+        value = $("#phone").val();
+      });
+    });
+  </script>
   <style>
     div {
       margin: 5px;
       background: yellow;
-    }
-
-    button {
-      margin: 5px;
-      font-size: 14px;
-      color: black;
-    }
-
-    p {
-      margin: 50px;
-      color: yellow;
-      font-size: 25px;
-      padding-bottom: 15px;
-      width: 35%;
-      font-family: Lobster;
-      margin-left: 30%;
-      line-height: 90%;
     }
 
     span {
@@ -83,60 +104,45 @@
       font-family: Lobster;
       margin-left: 30%;
       line-height: 90%;
-
-      .icon-group {
-        margin-top: 8px;
-      }
-
-      span, .link,  .fa, a {
-        color: yellow;
-      }
-
-      .fa {
-        font-size: 18px;
-      }
-
-      span,
-      a {
-        font-size: 16px;
-      }
-
-      a,
-      .website {
-        text-decoration: none;
-      }
-
-      a:hover,
-      .website:hover {
-        color: #red;
-      }
-
-
-      .icon-box {
-        position: relative;
-        color: yellow; font-size: 24px;
-        height: 45px;
-        width: 45px;
-        padding: 5px;
-        top: 75px;
-        left: 30%;
-        display: inline-block;
-        border: 2px solid $black;
-        margin: 5px;
-        text-align: center;
-        cursor: pointer;
-        transition: all ease 0.5s;
-      }
-
-      .icon-box:hover {
-        box-shadow: inset 0 50px 0 0; color: yellow;
-        color: $white;
-      }
-
     }
 
-    .flip-image {
-      perspective: 1000px;
+    .icon-group {
+      margin-top: 8px;
+    }
+
+    span,
+    .link,
+    .fa,
+    a {
+      color: yellow;
+    }
+
+    .fa {
+      font-size: 18px;
+    }
+
+    span,
+    a {
+      font-size: 16px;
+    }
+
+
+
+    .icon-box {
+      position: relative;
+      color: black;
+      font-size: 24px;
+      height: 45px;
+      width: 45px;
+      padding: 5px;
+      top: 75px;
+      left: 30%;
+      display: inline-block;
+      border: 2px solid black;
+      margin: 5px;
+      text-align: center;
+      cursor: pointer;
+      transition: all ease 0.5s;
     }
 
     .flip-image:hover .flipper,
@@ -164,57 +170,30 @@
       position: absolute;
     }
 
-
-
     .back {
       transform: rotateY(180deg);
     }
 
-    .vertical.flip-image {
-      position: relative;
+
+    p {
+      color: yellow;
+      font-family: Lobster;
+      width: 35%;
+      margin: 20px;
+      font-size: 25px;
+      padding-bottom: 15px;
+      margin-left: 30%;
+      line-height: 90%;
     }
 
-    .vertical .back {
-      transform: rotateX(180deg);
-    }
 
 
-    .vertical.flip-image:hover .flipper {
-      transform: rotateX(-180deg);
-    }
   </style>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script>
-    $(function() {
-
-      $('button').click(function() {
-        var owner = $('#owner').val();
-        var bus = $('#bus').val();
-        var email = $('#email').val();
-        var phone = $('#phone').val();
-
-        $(this).slideUp();
-
-        $("p").html("#owner").val();
-        $('p').html(owner).css("background-color", yellow);
-        $('p').html(bus).css("background-color", yellow);
-        $('p').html(email).css("background-color", yellow);
-        $('p').html(phone).css("background-color", yellow);
-$("p").css({"background-color": "yellow", "font-family": "Lobster"});
-        $('body').css("background-color", black);
-        value = $("#owner").val();
-        value = $("#bus").val();
-        value = $("#email").val();
-        value = $("#phone").val();
-
-      });
-    });
-  </script>
 
   <body>
 
     <div>
-     <button>Set Business Name</button> Business Name: <input id="owner"><br>
+      <button>Set Business Name</button> Business Name: <input id="owner"><br>
       <button>Set Owner Name</button> Full Owner Name: <input id="bus"><br>
       <button>Set Email Adress</button> Email: <input id="email"><br>
       <button>Set Phone Number</button> Phone Number: <input id="phone"><br>
@@ -231,11 +210,13 @@ $("p").css({"background-color": "yellow", "font-family": "Lobster"});
         <div class="flipper">
           <div class="front"></div>
           <div class="back">
-                <p></p>
-                <h1></h1>
-       <h3></h3>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+
             <div class="font-a-icons">
-              
+
               <div class="icon-group">
 
                 <div class="icon-group">

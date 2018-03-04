@@ -10,46 +10,41 @@
 </style>
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript">
-  $(function() {
+  $(function() { 
 
-    $('button').click(function() {
-      console.log(' the button was clicked');
-      var bus = $("#bus").val();
-      $('#buss').css(function() {
-        $(this).css('color', 'blue');
+      $('button').click(function() {
+        var owner = $('#owner').val();
+        var bus = $('#bus').val();
+        var email = $('#email').val();
+        var phone = $('#phone').val();
+
+        $('button').css({ "margin": "5px", "font-size": "14px", "color": "black" });
+
+
+        $(this).slideUp();
+
+
+
+        $("p").html("#owner").val();
+        $('p').html(owner).css("background-color", yellow);
+
+        $("p").html("#bus").val();
+        $('p').html(bus).css("background-color", yellow);
+
+        $("p").html("#email").val();
+        $('p').html(email).css("background-color", yellow);
+
+        $("p").html("#phone").val();
+        $('p').html(phone).css("background-color", yellow);
+
+        $("p").css({ "background-color": "yellow", "font-family": "impact" });
+        $('body').css("background-color", black);
+        value = $("#owner").val();
+        value = $("#bus").val();
+        value = $("#email").val();
+        value = $("#phone").val();
       });
-      var owner = $("#owner").val();
-      var email = $("#email").val();
-      var phone = $("#phone").val();
-      var address = $("#address").val();
-
-      $('#owner').click(function() {
-        $(this).css('color', 'blue');
-      });
-
-      var story = ("<font color=" + phone + ">" + "My Business Name is " + owner + " and my full name is " + bus + "." + " My address is " + address + " if you would like to contact me. " + "Incase of an emergency, you can contact me at: " + phone + " or " + email + "</font>" + " " + owner + "." + "</font>");
-      console.log(story);
-
-      $('p').html(story);
-
-
-      var r = confirm("Would you like to make your business card?");
-
-      if (r == true) {
-
-        x = "[Start Over]" (yes.md);
-
-      }
-      else {
-
-        x = "Have a good day !";
-
-      }
-
-
-
     });
-  });
 </script>
 
 <body>
