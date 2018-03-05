@@ -22,7 +22,9 @@
         $('button').css({ "margin": "5px", "font-size": "14px", "color": "black" });
         
         $(this).slideUp();
+        
 
+  
         $("p").html("#owner").val();
         $('p').html(owner).css("background-color", yellow);
 
@@ -36,7 +38,7 @@
         
         $('body').css("background-color", "black");
 
-
+ 
       });
     });
   </script>
@@ -110,10 +112,16 @@
       margin-left: 30%;
       line-height: 90%;
     }
+    
+    h2 {
+      color:white;
+      text-align: center;
+      
+    }
   </style>
 
   <body>
-
+<h2> Welcome! This is a Business Card Generator. Please fill out the inputs below and hover over the black box below to see the results.</h2>
     <div>
       <button>Set Business Name</button> Business Name: <input id="owner"><br>
       <button>Set Owner Name</button> Full Owner Name: <input id="bus"><br>
